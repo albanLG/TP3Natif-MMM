@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "686235226792",
+    "project_id": "tp3natif-mmm",
+    "storage_bucket": "tp3natif-mmm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686235226792:android:757dcc62c9ceb4fdf8689d",
+        "android_client_info": {
+          "package_name": "com.example.tp1_mmm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686235226792-9kooq7m0j44tldumlgh7kon6vmva6ehe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCuovvIrcl8pYy13HWRDUB9yc1BH9x72E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686235226792-9kooq7m0j44tldumlgh7kon6vmva6ehe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">686235226792-9kooq7m0j44tldumlgh7kon6vmva6ehe.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">686235226792</string>
+    <string name="google_api_key" translatable="false">AIzaSyCCuovvIrcl8pYy13HWRDUB9yc1BH9x72E</string>
+    <string name="google_app_id" translatable="false">1:686235226792:android:757dcc62c9ceb4fdf8689d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCCuovvIrcl8pYy13HWRDUB9yc1BH9x72E</string>
+    <string name="google_storage_bucket" translatable="false">tp3natif-mmm.appspot.com</string>
+    <string name="project_id" translatable="false">tp3natif-mmm</string>
+</resources>
