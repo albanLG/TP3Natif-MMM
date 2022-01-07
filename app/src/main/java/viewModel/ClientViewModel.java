@@ -10,7 +10,7 @@ import data.Client;
 
 public class ClientViewModel extends BaseObservable {
 
-    private Client client;
+    private Client client;//la classe metier
 
     public Client getClient(){return client;}
 

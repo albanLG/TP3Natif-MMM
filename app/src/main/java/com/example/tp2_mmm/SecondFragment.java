@@ -70,6 +70,9 @@ NavHostFragment.findNavController(SecondFragment.this)
             @Override
             public void onChanged(@Nullable List<Client> clients) {
                 adapter.setClients(clients);
+                System.out.println("TA MERE LA PUTE");
+                System.out.println("TA MERE LA PUTE");
+                System.out.println("TA MERE LA PUTE");
             }
         });
 

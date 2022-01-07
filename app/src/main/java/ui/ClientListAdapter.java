@@ -57,6 +57,7 @@ public class ClientListAdapter extends RecyclerView.Adapter<ClientListAdapter.Cl
         return clients.get(adapterPosition);
     }
 
+    //represente une ligne dans la liste
     class ClientHolder extends RecyclerView.ViewHolder {
         private TextView prenom;
         private TextView nom;

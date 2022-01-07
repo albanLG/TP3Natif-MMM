@@ -146,38 +146,43 @@ public final class ClientDao_Impl implements ClientDao {
           final List<Client> _result = new ArrayList<Client>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Client _item;
+            _item = new Client();
+            _item.uid = _cursor.getInt(_cursorIndexOfUid);
             final String _tmpPrenom;
             if (_cursor.isNull(_cursorIndexOfPrenom)) {
               _tmpPrenom = null;
             } else {
               _tmpPrenom = _cursor.getString(_cursorIndexOfPrenom);
             }
+            _item.setPrenom(_tmpPrenom);
             final String _tmpNom;
             if (_cursor.isNull(_cursorIndexOfNom)) {
               _tmpNom = null;
             } else {
               _tmpNom = _cursor.getString(_cursorIndexOfNom);
             }
+            _item.setNom(_tmpNom);
             final String _tmpBirthday;
             if (_cursor.isNull(_cursorIndexOfBirthday)) {
               _tmpBirthday = null;
             } else {
               _tmpBirthday = _cursor.getString(_cursorIndexOfBirthday);
             }
+            _item.setBirthday(_tmpBirthday);
             final String _tmpVilleNaissance;
             if (_cursor.isNull(_cursorIndexOfVilleNaissance)) {
               _tmpVilleNaissance = null;
             } else {
               _tmpVilleNaissance = _cursor.getString(_cursorIndexOfVilleNaissance);
             }
+            _item.setVilleNaissance(_tmpVilleNaissance);
             final String _tmpDepartement;
             if (_cursor.isNull(_cursorIndexOfDepartement)) {
               _tmpDepartement = null;
             } else {
               _tmpDepartement = _cursor.getString(_cursorIndexOfDepartement);
             }
-            _item = new Client(_tmpPrenom,_tmpNom,_tmpBirthday,_tmpVilleNaissance,_tmpDepartement);
-            _item.uid = _cursor.getInt(_cursorIndexOfUid);
+            _item.setDepartement(_tmpDepartement);
             _result.add(_item);
           }
           return _result;
@@ -222,38 +227,43 @@ public final class ClientDao_Impl implements ClientDao {
           final List<Client> _result = new ArrayList<Client>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Client _item_1;
+            _item_1 = new Client();
+            _item_1.uid = _cursor.getInt(_cursorIndexOfUid);
             final String _tmpPrenom;
             if (_cursor.isNull(_cursorIndexOfPrenom)) {
               _tmpPrenom = null;
             } else {
               _tmpPrenom = _cursor.getString(_cursorIndexOfPrenom);
             }
+            _item_1.setPrenom(_tmpPrenom);
             final String _tmpNom;
             if (_cursor.isNull(_cursorIndexOfNom)) {
               _tmpNom = null;
             } else {
               _tmpNom = _cursor.getString(_cursorIndexOfNom);
             }
+            _item_1.setNom(_tmpNom);
             final String _tmpBirthday;
             if (_cursor.isNull(_cursorIndexOfBirthday)) {
               _tmpBirthday = null;
             } else {
               _tmpBirthday = _cursor.getString(_cursorIndexOfBirthday);
             }
+            _item_1.setBirthday(_tmpBirthday);
             final String _tmpVilleNaissance;
             if (_cursor.isNull(_cursorIndexOfVilleNaissance)) {
               _tmpVilleNaissance = null;
             } else {
               _tmpVilleNaissance = _cursor.getString(_cursorIndexOfVilleNaissance);
             }
+            _item_1.setVilleNaissance(_tmpVilleNaissance);
             final String _tmpDepartement;
             if (_cursor.isNull(_cursorIndexOfDepartement)) {
               _tmpDepartement = null;
             } else {
               _tmpDepartement = _cursor.getString(_cursorIndexOfDepartement);
             }
-            _item_1 = new Client(_tmpPrenom,_tmpNom,_tmpBirthday,_tmpVilleNaissance,_tmpDepartement);
-            _item_1.uid = _cursor.getInt(_cursorIndexOfUid);
+            _item_1.setDepartement(_tmpDepartement);
             _result.add(_item_1);
           }
           return _result;
@@ -296,38 +306,43 @@ public final class ClientDao_Impl implements ClientDao {
       final int _cursorIndexOfDepartement = CursorUtil.getColumnIndexOrThrow(_cursor, "departement");
       final Client _result;
       if(_cursor.moveToFirst()) {
+        _result = new Client();
+        _result.uid = _cursor.getInt(_cursorIndexOfUid);
         final String _tmpPrenom;
         if (_cursor.isNull(_cursorIndexOfPrenom)) {
           _tmpPrenom = null;
         } else {
           _tmpPrenom = _cursor.getString(_cursorIndexOfPrenom);
         }
+        _result.setPrenom(_tmpPrenom);
         final String _tmpNom;
         if (_cursor.isNull(_cursorIndexOfNom)) {
           _tmpNom = null;
         } else {
           _tmpNom = _cursor.getString(_cursorIndexOfNom);
         }
+        _result.setNom(_tmpNom);
         final String _tmpBirthday;
         if (_cursor.isNull(_cursorIndexOfBirthday)) {
           _tmpBirthday = null;
         } else {
           _tmpBirthday = _cursor.getString(_cursorIndexOfBirthday);
         }
+        _result.setBirthday(_tmpBirthday);
         final String _tmpVilleNaissance;
         if (_cursor.isNull(_cursorIndexOfVilleNaissance)) {
           _tmpVilleNaissance = null;
         } else {
           _tmpVilleNaissance = _cursor.getString(_cursorIndexOfVilleNaissance);
         }
+        _result.setVilleNaissance(_tmpVilleNaissance);
         final String _tmpDepartement;
         if (_cursor.isNull(_cursorIndexOfDepartement)) {
           _tmpDepartement = null;
         } else {
           _tmpDepartement = _cursor.getString(_cursorIndexOfDepartement);
         }
-        _result = new Client(_tmpPrenom,_tmpNom,_tmpBirthday,_tmpVilleNaissance,_tmpDepartement);
-        _result.uid = _cursor.getInt(_cursorIndexOfUid);
+        _result.setDepartement(_tmpDepartement);
       } else {
         _result = null;
       }

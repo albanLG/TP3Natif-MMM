@@ -3,6 +3,8 @@ package data;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.android.gms.tasks.Task;
+
 import java.util.List;
 
 // A basic API to access the data (can be replaced if needed by another implementation)
@@ -15,8 +17,9 @@ public class BasicRepository  implements IRepository {
     }
 
     @Override
-    public void insertClient(Client client) {
+    public Task<Void> insertClient(Client client) {
         list.add(client);
+        return null;
     }
 
 

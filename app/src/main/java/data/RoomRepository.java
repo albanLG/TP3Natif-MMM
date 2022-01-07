@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
+import com.google.android.gms.tasks.Task;
+
 import java.util.List;
 
 // A basic API to access the data (can be replaced if needed by another implementation)
@@ -24,8 +26,9 @@ public class RoomRepository  implements IRepository {
 
 
     @Override
-    public void insertClient(Client client) {
+    public Task<Void> insertClient(Client client) {
         new InsertClientAsyncTask(clientDao).execute(client);
+        return null;
     }
 
 

@@ -12,6 +12,7 @@ import java.util.List;
 import data.BasicRepository;
 import data.Client;
 import data.ClientList;
+import data.FirebaseRepository;
 import data.IRepository;
 import data.RoomRepository;
 
@@ -40,13 +41,16 @@ public class ClientListViewModel extends AndroidViewModel {
 
         if (!isIntialized()) {
 
-            //ClientList l = new ClientList();
-            //l.add(new Client("Bilal","Enki","02/02/2021","Paris","Ille et Vilaine (35)"));
-            //l.add(new Client("Bajram","Denis","02/02/2021","Angouleme","Ille et Vilaine (35)"));
-            //repository = new BasicRepository(l);
+            /*ClientList l = new ClientList();
+            l.add(new Client("Bilal","Enki","02/02/2021","Paris","Ille et Vilaine (35)"));
+            l.add(new Client("Bajram","Denis","02/02/2021","Angouleme","Ille et Vilaine (35)"));
+            repository = new BasicRepository(l);*/
 
             // or use ROOM
-            repository = new RoomRepository(application);
+            //repository = new RoomRepository(application);
+
+            // or use Firebase
+            repository = new FirebaseRepository(application);
         }
 
         allClients = repository.getAllClients();
