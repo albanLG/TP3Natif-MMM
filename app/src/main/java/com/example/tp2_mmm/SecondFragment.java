@@ -52,6 +52,7 @@ NavHostFragment.findNavController(SecondFragment.this)
 }
 });
  **/
+
         RecyclerView recyclerView = view.findViewById(R.id.clients);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setHasFixedSize(true);
@@ -70,9 +71,6 @@ NavHostFragment.findNavController(SecondFragment.this)
             @Override
             public void onChanged(@Nullable List<Client> clients) {
                 adapter.setClients(clients);
-                System.out.println("TA MERE LA PUTE");
-                System.out.println("TA MERE LA PUTE");
-                System.out.println("TA MERE LA PUTE");
             }
         });
 
@@ -101,11 +99,11 @@ NavHostFragment.findNavController(SecondFragment.this)
         });
     }
 
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }
+
 
 }

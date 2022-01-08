@@ -14,15 +14,12 @@ data/AppDataBase.java
  data.AppDataBase
  data.AppDataBase$1
  data.AppDataBase$PopulateDbAsyncTask
-com/example/tp2_mmm/MainActivity.java
- com.example.tp2_mmm.MainActivity
+viewModel/ClientListViewModel.java
+ viewModel.ClientListViewModel
 data/BasicRepository.java
  data.BasicRepository
-com/example/tp2_mmm/SecondFragment.java
- com.example.tp2_mmm.SecondFragment
- com.example.tp2_mmm.SecondFragment$1
- com.example.tp2_mmm.SecondFragment$2
- com.example.tp2_mmm.SecondFragment$3
+com/example/tp2_mmm/MainActivity.java
+ com.example.tp2_mmm.MainActivity
 data/IRepository.java
  data.IRepository
 com/example/tp2_mmm/databinding/FragmentSecondBinding.java
@@ -31,6 +28,8 @@ com/example/tp2_mmm/databinding/ActivityMainBinding.java
  com.example.tp2_mmm.databinding.ActivityMainBinding
 com/example/tp2_mmm/databinding/ClientItemBinding.java
  com.example.tp2_mmm.databinding.ClientItemBinding
+data/myLiveData.java
+ data.myLiveData
 com/example/tp2_mmm/databinding/FragmentFirstBinding.java
  com.example.tp2_mmm.databinding.FragmentFirstBinding
 data/Client.java
@@ -50,5 +49,8 @@ com/example/tp2_mmm/FirstFragment.java
 data/FirebaseRepository.java
  data.FirebaseRepository
  data.FirebaseRepository$1
-viewModel/ClientListViewModel.java
- viewModel.ClientListViewModel
+com/example/tp2_mmm/SecondFragment.java
+ com.example.tp2_mmm.SecondFragment
+ com.example.tp2_mmm.SecondFragment$1
+ com.example.tp2_mmm.SecondFragment$2
+ com.example.tp2_mmm.SecondFragment$3

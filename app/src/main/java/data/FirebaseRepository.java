@@ -7,10 +7,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import com.example.tp2_mmm.SecondFragment;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,12 +22,10 @@ public class FirebaseRepository implements IRepository  {
     //se sert directement de l api de firebase
 
     private DatabaseReference databaseReference;
-    private LiveData<List<Client>> allClients=new MutableLiveData<>(Arrays.asList(
-            new Client("hello","pute","salope","gpag","pgiqjg")
-    ));
-    //private LiveData<List<Client>> allClients;
+    private myLiveData<List<Client>> allClients= new myLiveData<List<Client>>();
 
-    public FirebaseRepository(Application application){
+
+    public FirebaseRepository(){
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         databaseReference = db.getReference(Client.class.getSimpleName());
 
@@ -44,13 +40,10 @@ public class FirebaseRepository implements IRepository  {
                 }
 
                 setClients(clientList);
-
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError databaseError) { }
         });
     }
 
@@ -75,21 +68,6 @@ public class FirebaseRepository implements IRepository  {
     }
 
     public void setClients(List<Client> clients){
-        //allClients=new MutableLiveData<>(clients);
-
-        allClients=new MutableLiveData<>(Arrays.asList(
-                new Client("hello","pute","salope","gpag","pgiqjg"),
-                new Client("sheje","pute","salope","gpag","pgiqjg")
-        ));
-
-        /*List<Client> data=allClients.getValue();
-        data.removeAll(data);
-        data.addAll(clients);*/
-
-        synchronized(allClients) {
-            allClients.notify();
-            System.out.println(allClients.getValue().size());
-        }
-
+        allClients.setTheData(clients);
     }
 }

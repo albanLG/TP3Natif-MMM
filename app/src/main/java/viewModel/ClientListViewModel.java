@@ -41,6 +41,7 @@ public class ClientListViewModel extends AndroidViewModel {
 
         if (!isIntialized()) {
 
+            // use basicRepository (les donnees proviennent juste d une liste)
             /*ClientList l = new ClientList();
             l.add(new Client("Bilal","Enki","02/02/2021","Paris","Ille et Vilaine (35)"));
             l.add(new Client("Bajram","Denis","02/02/2021","Angouleme","Ille et Vilaine (35)"));
@@ -50,17 +51,12 @@ public class ClientListViewModel extends AndroidViewModel {
             //repository = new RoomRepository(application);
 
             // or use Firebase
-            repository = new FirebaseRepository(application);
+            repository = new FirebaseRepository();
         }
 
         allClients = repository.getAllClients();
     }
 
-    public void setRepository(IRepository r) {
-        repository = r;
-        allClients = repository.getAllClients();
-
-    }
 
     public void insert(Client client) {
         repository.insertClient(client);
